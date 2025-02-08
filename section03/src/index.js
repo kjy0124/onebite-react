@@ -8,3 +8,8 @@ import mul, { add, sub } from "./math.js";
 console.log(add(1, 2));
 console.log(sub(1, 2));
 console.log(mul(2, 3));
+
+//라이브러리 호출 시 주소 값 필요 없음
+import randomColor from "randomcolor";
+const color = randomColor();
+console.log(color);
