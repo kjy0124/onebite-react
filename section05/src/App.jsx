@@ -3,15 +3,10 @@ import "./App.css";
 // import Main from "./components/Main";
 // import Footer from "./components/Footer";
 // import Button from "./components/Button";
-
-//state
-import { useState } from "react";
+import Bulb from "./components/Bulb";
+import Count from "./components/Count";
 
 function App() {
-  //state(count)에는 위의 useState를 통해 생성한 state(count)의 값
-  //setState(setCount)에는 state(count)의 값을 변경시키는 함수
-  const [count, setCount] = useState(0);
-  const [light, setLight] = useState("OFF");
   // const buttonProps = {
   //   text: "메일",
   //   color: "red",
@@ -21,26 +16,9 @@ function App() {
   // };
   return (
     <>
-      <div>
-        <h1>{light}</h1>
-        <button
-          onClick={() => {
-            setLight(light === "ON" ? "OFF" : "ON");
-          }}
-        >
-          {light === "ON" ? "끄기" : "켜기"}
-        </button>
-      </div>
-      <div>
-        <h1>{count}</h1>
-        <button
-          onClick={() => {
-            setCount(count + 1);
-          }}
-        >
-          +
-        </button>
-      </div>
+      <Bulb />
+      {/* <h1>{light}</h1> */}
+      <Count />
       {/* <Button {...buttonProps} />
       <Button text={"카페"} />
       <Button text={"블로그"}>
