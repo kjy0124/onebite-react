@@ -3,8 +3,9 @@ import "./App.css";
 // import Main from "./components/Main";
 // import Footer from "./components/Footer";
 // import Button from "./components/Button";
-import Bulb from "./components/Bulb";
-import Count from "./components/Count";
+// import Bulb from "./components/Bulb";
+// import Count from "./components/Count";
+import Register from "./components/Register";
 
 function App() {
   // const buttonProps = {
@@ -16,9 +17,10 @@ function App() {
   // };
   return (
     <>
-      <Bulb />
+      <Register />
+      {/* <Bulb />
+      <Count /> */}
       {/* <h1>{light}</h1> */}
-      <Count />
       {/* <Button {...buttonProps} />
       <Button text={"카페"} />
       <Button text={"블로그"}>
