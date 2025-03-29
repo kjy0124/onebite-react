@@ -1,6 +1,10 @@
 const Button = ({ buttonColor = "black", buttonText, children }) => {
+  const onClickBtn = (e) => {
+    console.log(e);
+  };
+
   return (
-    <button style={{ color: buttonColor }}>
+    <button onClick={onClickBtn} style={{ color: buttonColor }}>
       {buttonText} - {buttonColor}
       {children}
     </button>
