@@ -1,24 +1,27 @@
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
-import Button from "./components/Button";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const buttonProps = {
-    buttonText: "뉴스",
-    buttonColor: "orange",
+  const [input, setInput] = useState("");
+  const [todo, setTodo] = useState([]);
+  const addTodo = () => {
+    setTodo([...todo, input]);
   };
-
   return (
     <>
-      <Button {...buttonProps} />
-      <Button buttonColor={"red"} buttonText={"메일"} />
-      <Button buttonColor={"green"} buttonText={"카페"} />
-      <Button buttonColor={"blue"} buttonText={"블로그"} />
-      <Button buttonText={"인기글"}>
-        <div>자식임</div>
-      </Button>
+      <div>
+        <input
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button onClick={addTodo}>추가</button>
+      </div>
+      <ul>
+        {todo.map((todoList, index) => (
+          <li key={index}>{todoList}</li>
+        ))}
+      </ul>
     </>
   );
 }
